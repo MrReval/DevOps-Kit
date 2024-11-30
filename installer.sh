@@ -18,13 +18,13 @@ else
 fi
 
 echo "Setting up execute permissions for scripts..."
-chmod +x scripts/manage_containers.sh 
+chmod +x scripts/create_container.sh 
 
-echo "Running manage_containers.sh..."
-./scripts/manage_containers.sh 
+echo "Running create_container.sh..."
+./scripts/create_container.sh 
 
 echo "Creating a shortcut for 'DevOps-Kit' command..."
-sudo ln -s $(pwd)/scripts/manage_containers.sh /usr/local/bin/DevOps-Kit
+sudo ln -s $(pwd)/scripts/create_container.sh /usr/local/bin/DevOps-Kit
 
 echo "Installation complete! Your DevOps Kit is ready to use."
-echo "You can now use the 'DevOps-Kit' command from anywhere to run the manage_containers.sh script."
+echo "You can now use the 'DevOps-Kit' command from anywhere to run the create_container.sh script."
