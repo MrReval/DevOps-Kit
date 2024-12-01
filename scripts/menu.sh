@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# تغییر مسیر به دایرکتوری اصلی پروژه
+cd "$(dirname "$0")/.." || exit
+
 # تابع نمایش منو
 menu() {
   echo -e "\e[35m1) =| CreateContainer\e[0m"
@@ -26,7 +29,7 @@ itemlist() {
 
 CreateContainer() {
   if [ -f "./scripts/create_container.sh" ]; then
-    ./scripts/create_container.sh
+    bash ./scripts/create_container.sh
   else
     echo "Error: create_container.sh not found!"
   fi
@@ -34,7 +37,7 @@ CreateContainer() {
 
 ConnectToGitRepo() {
   if [ -f "./scripts/git_deploy.sh" ]; then
-    ./scripts/git_deploy.sh
+    bash ./scripts/git_deploy.sh
   else
     echo "Error: git_deploy.sh not found!"
   fi
@@ -42,15 +45,15 @@ ConnectToGitRepo() {
 
 ManageContainer() {
   if [ -f "./scripts/manage_containers.sh" ]; then
-    ./scripts/manage_containers.sh
+    bash ./scripts/manage_containers.sh
   else
     echo "Error: manage_containers.sh not found!"
   fi
 }
 
 ContainerUsageReport() {
-  if [ -f "./resource_report.sh" ]; then
-    ./scripts/resource_report.sh
+  if [ -f "./scripts/resource_report.sh" ]; then
+    bash ./scripts/resource_report.sh
   else
     echo "Error: resource_report.sh not found!"
   fi
