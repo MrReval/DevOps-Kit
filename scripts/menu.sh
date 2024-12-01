@@ -8,7 +8,7 @@ show_menu() {
   echo -e "\e[33m12) =| ContainerUsageReport\e[0m"
 }
 
-create_container() {
+itemlist() {
   echo "Please select a platform: "
   show_menu
   read choice
@@ -36,3 +36,4 @@ ConnectToGitRepo(){
     ./scripts/git_deploy.sh
 
 }
+itemlist
