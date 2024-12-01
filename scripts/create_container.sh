@@ -152,7 +152,7 @@ create_mysql() {
 
 create_mongodb() {
   echo "Setting up MongoDB container..."
-  docker run --name mongodb-container -d -p 27017:27017 mongo:latest
+  docker run --name some-mongo -v /data/backup:/etc/mongo -d -p 27017:27017 mongo:latest
   echo "MongoDB container successfully created."
   echo "Container URL: mongodb://localhost:27017"
 }
