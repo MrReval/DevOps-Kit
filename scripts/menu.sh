@@ -25,24 +25,24 @@ itemlist() {
 # تعریف توابع
 
 CreateContainer() {
-  if [ -f "./create_container.sh" ]; then
-    ./create_container.sh
+  if [ -f "./scripts/create_container.sh" ]; then
+    ./scripts/create_container.sh
   else
     echo "Error: create_container.sh not found!"
   fi
 }
 
 ConnectToGitRepo() {
-  if [ -f "./git_deploy.sh" ]; then
-    ./git_deploy.sh
+  if [ -f "./scripts/git_deploy.sh" ]; then
+    ./scripts/git_deploy.sh
   else
     echo "Error: git_deploy.sh not found!"
   fi
 }
 
 ManageContainer() {
-  if [ -f "./manage_containers.sh" ]; then
-    ./manage_containers.sh
+  if [ -f "./scripts/manage_containers.sh" ]; then
+    ./scripts/manage_containers.sh
   else
     echo "Error: manage_containers.sh not found!"
   fi
@@ -50,7 +50,7 @@ ManageContainer() {
 
 ContainerUsageReport() {
   if [ -f "./resource_report.sh" ]; then
-    ./resource_report.sh
+    ./scripts/resource_report.sh
   else
     echo "Error: resource_report.sh not found!"
   fi
