@@ -1,6 +1,6 @@
 #!/bin/bash
 
-show_menu() {
+menu() {
 
   echo -e "\e[35m10) =| CreateContainer\e[0m"
   echo -e "\e[36m20) =| ConnectToGitRepo\e[0m"
@@ -9,8 +9,8 @@ show_menu() {
 }
 
 itemlist() {
-  echo "Please select a platform: "
-  show_menu
+  echo "Please select a item: "
+  menu
   read choice
   case $choice in
     1) CreateContainer ;;
